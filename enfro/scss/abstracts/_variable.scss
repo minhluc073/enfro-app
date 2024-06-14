@@ -1,0 +1,75 @@
+//settings
+$font-main-family: "Urbanist", sans-serif;
+$font-2: "Signika", sans-serif;
+$fontIcon: "icomoon";
+$fz-btn: 16px;
+$lh-btn: 24px;
+
+:root {
+    --black: #1a1528;
+    --white: #ffffff;
+    --primary: #7f52ff;
+    --primary-2: #9974ff;
+    --primary-3: #b297ff;
+    --primary-4: #ccbaff;
+    --primary-5: #e5dcff;
+    // secondary:
+    --blue: #2664ed;
+    --sky-blue: #30b5ff;
+    --green: #55d25a;
+    --orange: #fda222;
+    --red: #fb5556;
+    --line: rgba(26, 21, 40, 0.1);
+    --line-2: rgba(26, 21, 40, 0.12);
+    --line-3: rgba(26, 21, 40, 0.08);
+
+    // linear gradient
+    --violet-linear: linear-gradient(286.17deg, #7f2dff 0%, #9958ff 100%);
+    --pest-linear: linear-gradient(119.35deg, #ff51ee 4.36%, #ff2cea 98.86%);
+    --sky-blue-linear: linear-gradient(128.93deg, #4fc0ff 5.29%, #00a4ff 95.1%);
+    --blue-linear: linear-gradient(110.65deg, #5786ff 2.98%, #2d68ff 100%);
+    --green-linear: linear-gradient(286.17deg, #07bd74 0%, #1ee495 100%);
+    --orange-linear: linear-gradient(286.17deg, #fb9400 0%, #ffab38 100%);
+    --red-linear: linear-gradient(286.17deg, #ff4d67 0%, #ff8a9b 100%);
+
+    //state color
+    --info: #2f80ed;
+    --success: #27ae60;
+    --warning: #e2b93b;
+    --danger: #eb5757;
+
+    --rgba-primary: rgba(127, 82, 255, 0.08);
+    --rgba-primary-2: rgba(127, 82, 255, 0.05);
+
+    --rgba-orange: rgba(253, 162, 34, 0.08);
+    --rgba-orange-2: rgba(253, 162, 34, 0.05);
+
+    --rgba-green: rgba(85, 210, 90, 0.08);
+    --rgba-blue: rgba(38, 100, 237, 0.08);
+    --rgba-sky-blue: rgb(48, 181, 255, 0.05);
+    --rgba-error: rgba(251, 85, 86, 0.08);
+    --rgba-black-1: rgba(26, 21, 40, 0.8);
+    --rgba-black-2: rgba(26, 21, 40, 0.1);
+    --rgba-black-3: rgba(26, 21, 40, 0.6);
+    --rgba-black-4: rgba(26, 21, 40, 0.04);
+    --rgba-black-5: rgba(26, 21, 40, 0.2);
+    --rgba-black-6: rgba(26, 21, 40, 0.4);
+    --rgba-black-7: rgba(26, 21, 40, 0.92);
+    --rgba-white: rgba(255, 255, 255, 0.6);
+
+    --rgba-success: rgba(30, 127, 17, 0.1);
+    --rgba-danger: rgba(225, 0, 0, 0.1);
+    --rgba-warning: rgba(255, 138, 0, 0.1);
+    --rgba-info: rgba(167, 2, 103, 0.1);
+    --rgba-dark: rgba(27, 50, 95, 0.1);
+    --rgba-disable: rgba(135, 59, 10, 0.1);
+
+    // shadow
+    --shadow-1: 0px 3px 40px 0px #1a15280a;
+    --shadow-2: 0px 12px 48px 0px #1a15280d;
+    --shadow-3: 0px 5px 60px 0px #1a152814;
+    --shadow-4: 0px 20px 80px 0px #2c27390d;
+    --shadow-5: 0px 8px 68px 0px #1a15280f;
+    --shadow-6: 0px 4px 40px 0px #1a15280d;
+    --shadow-7: 0px 8px 48px 0px #1a15280d;
+}
