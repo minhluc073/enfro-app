@@ -204,7 +204,9 @@
 }
 .item {
     &.box-accordion {
-        display: block;
+        display: block !important;
+        padding-bottom: 0 !important;
+
         .content-left {
             display: block;
             .less {
@@ -212,6 +214,7 @@
             }
         }
         .box {
+            padding-bottom: 16px;
             &:not(.collapsed) {
                 .more {
                     display: none;
@@ -220,6 +223,9 @@
                     display: block;
                 }
             }
+        }
+        .body{
+            padding-bottom: 16px;
         }
     }
 }

@@ -154,11 +154,12 @@
         }
     }
     .card-body {
-        padding: 20px;
+        padding: 20px 0px;
         border-top: 1px solid var(--line-3);
+        margin: 0 20px;
         &.wrap-chart {
             box-shadow: unset;
-            padding: 20px 6px;
+            border-radius: 0;
             img{
                 width: 248px;
             }

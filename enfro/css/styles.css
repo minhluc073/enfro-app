@@ -1320,7 +1320,8 @@ select {
 .dark-theme .dropdown-menu a {
   color: var(--black);
 }
-.dark-theme .check-list .body-5, .dark-theme .check-list .button-3 {
+.dark-theme .check-list .body-5,
+.dark-theme .check-list .button-3 {
   color: var(--black);
 }
 .dark-theme .check-list .active {
@@ -1338,7 +1339,8 @@ select {
 .dark-theme .card-banner-2 .text-white {
   color: var(--black) !important;
 }
-.dark-theme .list-view-v7 .button-3, .dark-theme .list-view-v7 .body-3 {
+.dark-theme .list-view-v7 .button-3,
+.dark-theme .list-view-v7 .body-3 {
   color: var(--black);
 }
 .dark-theme .list-view-v7 .body-3 svg path {
@@ -1452,6 +1454,20 @@ select {
 }
 .dark-theme .apexcharts-grid-borders line {
   stroke: var(--line-3) !important;
+}
+.dark-theme .text-1,
+.dark-theme .text-2,
+.dark-theme .text-5 {
+  color: var(--black);
+}
+.dark-theme label {
+  color: var(--black);
+}
+.dark-theme .apexcharts-legend-text {
+  color: var(--black) !important;
+}
+.dark-theme .text-black {
+  color: var(--black) !important;
 }
 
 /*------------ Components ---------------- */
@@ -2929,7 +2945,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .menubar-footer .inner-bar .action-add-wallet a i {
   font-size: 20px;
-  color: var(--white);
+  color: #fff;
 }
 .menubar-footer.style-1 {
   border-bottom-left-radius: 16px;
@@ -3075,7 +3091,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /*------------ alert ---------------- */
 .alert {
-  color: var(--white);
+  color: #fff;
   margin-bottom: 0px;
   padding: 10px;
   border-radius: 14px;
@@ -3188,6 +3204,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .alert.alert-light {
   background: #e7e7e7;
   border: 1px solid #e7e7e7;
+  color: #111;
 }
 .alert.alert-light.light {
   background: #E7E7E7;
@@ -3487,6 +3504,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .tf-switch-check:checked::before {
   left: 9px;
+}
+.tf-switch-check.lg {
+  width: 24px;
+  height: 18px;
+}
+.tf-switch-check.lg::before {
+  width: 10px;
+  height: 10px;
 }
 
 .fieldset-sw {
@@ -3829,12 +3854,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   stroke: var(--primary);
 }
 .card-nft-1 .card-body {
-  padding: 20px;
+  padding: 20px 0px;
   border-top: 1px solid var(--line-3);
+  margin: 0 20px;
 }
 .card-nft-1 .card-body.wrap-chart {
   box-shadow: unset;
-  padding: 20px 6px;
+  border-radius: 0;
 }
 .card-nft-1 .card-body.wrap-chart img {
   width: 248px;
@@ -5766,7 +5792,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .item.box-accordion {
-  display: block;
+  display: block !important;
+  padding-bottom: 0 !important;
 }
 .item.box-accordion .content-left {
   display: block;
@@ -5774,11 +5801,17 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .item.box-accordion .content-left .less {
   display: none;
 }
+.item.box-accordion .box {
+  padding-bottom: 16px;
+}
 .item.box-accordion .box:not(.collapsed) .more {
   display: none;
 }
 .item.box-accordion .box:not(.collapsed) .less {
   display: block;
+}
+.item.box-accordion .body {
+  padding-bottom: 16px;
 }
 
 .list-view-v7 li .item {
@@ -6158,7 +6191,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   height: 52px;
 }
 .preload-container .spinner-circle .spinner-child::before {
-  background-color: var(--white);
+  background-color: #fff;
 }
 
 .preload-logo {
@@ -6238,6 +6271,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .category-select .icon {
   font-weight: 600;
   transform: rotate(90deg);
+}
+
+.box-heart.active .icon {
+  color: var(--primary) !important;
 }
 
 /*--------------- section ---------------- */

@@ -25,6 +25,14 @@
             left: 9px;
         }
     }
+    &.lg{
+        width: 24px;
+        height: 18px;
+        &::before{
+            width: 10px;
+            height: 10px;
+        }
+    }
 
 }
 .fieldset-sw {

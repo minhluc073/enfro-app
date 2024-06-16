@@ -109,23 +109,7 @@
 
   /* drop calendar
   ------------------------------------------------------------------------------------- */
-  var dropCalendar = function () {
-    $(".dropdown-calendar").on("click", function (event) {
-      event.stopPropagation();
-    });
-    $("#btnCloseDropdown1").click(function () {
-      $(this)
-        .parents(".dropdown")
-        .find(".dropdown-start-date")
-        .dropdown("toggle");
-    });
-    $("#btnCloseDropdown2").click(function () {
-      $(this)
-        .parents(".dropdown")
-        .find(".dropdown-due-date")
-        .dropdown("toggle");
-    });
-  };
+
 
   /* delete Item 
   ------------------------------------------------------------------------------------- */
@@ -353,6 +337,9 @@
       $(".act-suggest3.active").removeClass("active");
       $(this).toggleClass("active");
     });
+    $(".press-toggle").on("click", function () {
+      $(this).toggleClass("active");
+    });
   };
 
   if ($(".nice-select").length > 0) {
@@ -538,7 +525,7 @@
     clickModalSecond();
     flcustominput();
     tabSlide();
-    dropCalendar();
+    // dropCalendar();
     flatCounter();
     handleTime();
     datePicker();

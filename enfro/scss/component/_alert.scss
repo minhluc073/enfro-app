@@ -1,5 +1,5 @@
 .alert {
-    color: var(--white);
+    color: #fff;
     margin-bottom: 0px;
     padding: 10px;
     border-radius: 14px;
@@ -112,6 +112,7 @@
     &.alert-light {
         background: #e7e7e7;
         border: 1px solid #e7e7e7;
+        color: #111;
         .btn-close {
         }
         &.light {

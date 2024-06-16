@@ -26,7 +26,7 @@
             color: var(--black);
         }
     }
-    .h5{
+    .h5 {
         color: var(--black);
     }
     .wrapper-tab {
@@ -65,39 +65,41 @@
         background-color: var(--line);
     }
     .dropdown-menu {
-        a{
+        a {
             color: var(--black);
         }
     }
     .check-list {
-        .body-5,.button-3{
+        .body-5,
+        .button-3 {
             color: var(--black);
         }
         .active {
             background-color: rgba(255, 255, 255, 0.12);
         }
     }
-    .body-3{
+    .body-3 {
         color: var(--black);
     }
-    
+
     .card-banner-1 {
         border: 1px solid var(--line);
-        h6{
+        h6 {
             color: var(--black) !important;
         }
     }
-    .card-banner-2{
-        .text-white{
+    .card-banner-2 {
+        .text-white {
             color: var(--black) !important;
         }
     }
-    .list-view-v7{
-        .button-3,.body-3{
+    .list-view-v7 {
+        .button-3,
+        .body-3 {
             color: var(--black);
         }
-        .body-3{
-            svg path{
+        .body-3 {
+            svg path {
                 fill: var(--black);
             }
         }
@@ -245,5 +247,20 @@
     }
     .apexcharts-grid-borders line {
         stroke: var(--line-3) !important;
+    }
+    
+    .text-1,
+    .text-2,
+    .text-5 {
+        color: var(--black);
+    }
+    label{
+        color: var(--black);
+    }
+    .apexcharts-legend-text{
+        color: var(--black) !important;
+    }
+    .text-black{
+        color: var(--black) !important;
     }
 }

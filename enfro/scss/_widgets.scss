@@ -1,4 +1,4 @@
-.category-select{
+.category-select {
     font-size: 14px;
     line-height: 24px;
     font-weight: 600;
@@ -9,8 +9,15 @@
     align-items: center;
     border-radius: 12px;
     border: 1px solid var(--primary);
-    .icon{
+    .icon {
         font-weight: 600;
         transform: rotate(90deg);
+    }
+}
+.box-heart {
+    &.active {
+        .icon {
+            color: var(--primary) !important;
+        }
     }
 }
