@@ -10,30 +10,40 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet"type="text/css" href="css/nouislider.min.css"/>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/jqueryui.min.css">
+    <link rel="stylesheet" href="css/apexcharts.css">
     <link rel="stylesheet"type="text/css" href="css/styles.css"/>
 
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/168.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo/168.png" />
 
-    <title>Buy now</title>
-
+    <title>Complete Listing</title>
 </head>
 
 <body>
     
     <div class="header fixed-top">
         <div class="left">
-          <a href="javascript:void(0);" class="icon back-btn"><i class="icon-arrow-right"></i></a>
+          <a href="javascript:void(0);" class="icon back-btn fs-12"><i class="icon-close2"></i></a>
         </div>
-        <h3>Buy Now</h3>
+        <h3>Complete Listing</h3>
+        
     </div>
     <div class="app-content style-2">
         <div class="tf-container">
+            <div class="text-center">
+                <div class="box-wallet-2">
+                    <img src="images/wallet/wallet-1.png" alt="img">
+                </div>
+            </div>
+            <div class="mt-24 pb-20 text-center">
+                <h4 class="text-dark-3">Signature Request</h4>
+                <a href="https://enfti.com" target="_blank" class="mt-12 button-2 text-primary d-inline-block">https://enfti.com</a>
+                <p class="mt-12 fw-7 text-dark">7EK933L1E6W948...7MXPC93676P7Q4</p>
+            </div>
             <a href="#" class="box-wallet-3">
                 <div class="avatar round avt-48">
-                    <img src="images/avt/avt10.png" alt="">                      
+                    <img src="images/avt/avt-wallet.png" alt="">                      
                 </div>
                 <div class="content d-flex justify-content-between">
                     <div class="content-left">
@@ -56,34 +66,65 @@
                 </div>
                 
                     
-            </a> 
-            <div class="card-nft-1 mt-24">
-                <div class="card-header gap-12" data-bs-toggle="collapse" data-bs-target="#wallet-1" aria-expanded="true" aria-controls="wallet-1">
-                    <span class="icon icon-wallet-money fs-24"></span>
-                    <h6 class="flex-grow-1">Send to a Different Wallet</h6>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.9201 8.94922L13.4001 15.4692C12.6301 16.2392 11.3701 16.2392 10.6001 15.4692L4.08008 8.94922" stroke="#1A1528" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>    
+            </a>   
+            <div class="card-wallet-1 mt-24">
+                <div class="card-header">
+                    <span class="icon icon-sms text-dark"></span>
+                    <h6 class="fw-7 flex-grow-1">Message</h6>
                 </div>
-                <div id="wallet-1" class="accordion-collapse collapse show" aria-labelledby="wallet-1">
-                    <div class="card-body">
-                        <input type="text" class="form-control" value="7EK933L1E6W948...7MXPC93676P7Q4">
-                    </div>
+                <div class="card-body">
+                    <p class="text-dark-2 body-3 mt-12">
+                        Offerer:
+                        0x7131CA848567678fj464dh37f81848f8E696
+                        offer: 0:
+                        itemType: 1
+                        token:
+                        0x7ceB23fD6bC0adD845578270cFf1b9f619
+                        identifierOrCriteria: 0
+                        startAmount:
+                        1000000000000000
+                        endAmount:
+                        1000000000000000
+                        consideration: 0:
+                        itemType: 3
+                        token:
+                        0xA60406089jf7fjf7jrj4j4j4hfA83AEDACec
+                        identifierOrCriteria:
+                    </p>
                 </div>
-                     
+                
+                
             </div>
-                
-                
         </div>
-        
         
     </div>
 
     <div class="btn-fixed">
-        <a href="confirm-offer2.html" class="tf-btn primary">COMPLETE PURCHASE</a>
+        <div class="grid-2 gap-15">
+            <a href="#" class="tf-btn disabled-primary">CANCEL</a>
+            <a href="#success" data-bs-toggle="modal" class="tf-btn primary"> SIGN</a>
+
+        </div>
     </div>
 
-   
+    <div class="modal fade modalCenter" id="success">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="mb-40">
+                    <img src="images/background/Illustrations.png" alt="">
+                </div> 
+                <div class="mb-32 text-center">
+                    <h4 class="text-dark-3">Congratulations!</h4>
+                    <p class="body-3 text-dark-2 mt-12">Your item has been activated for sale.</p>
+                </div> 
+                <div class="mt-32">
+                    <a href="nft-details-listed.html" class="tf-btn primary">VIEW ITEM</a>
+                    <a href="#" class="tf-btn disabled-primary mt-16" data-bs-dismiss="modal">CANCEL</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    
 
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -92,7 +133,9 @@
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/carousel.js"></script>
     <script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
-    <script type="text/javascript" src="js/jqueryui.min.js"></script>
+    <script type="text/javascript" src="js/apexcharts.js"></script>
+    <script type="text/javascript" src="js/chart-init.js"></script>
+    <script type="text/javascript" src="js/count-down.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
 </body>

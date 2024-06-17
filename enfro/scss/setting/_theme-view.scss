@@ -74,9 +74,17 @@
         .button-3 {
             color: var(--black);
         }
+        
         .active {
-            background-color: rgba(255, 255, 255, 0.12);
+            background-color: rgba(255, 255, 255, 0.12) !important;
         }
+        .item{
+            &:has(.show){
+            background-color: rgba(255, 255, 255, 0.12) !important;
+
+            }
+        }
+
     }
     .body-3 {
         color: var(--black);
@@ -262,5 +270,17 @@
     }
     .text-black{
         color: var(--black) !important;
+    }
+    .list-view-v3{
+        .item{
+            svg path{
+                stroke: var(--black);
+            }
+        }
+    }
+    .icon-arr-dark{
+        path{
+            stroke: var(--black);
+        }
     }
 }

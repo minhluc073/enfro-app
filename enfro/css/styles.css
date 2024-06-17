@@ -1325,7 +1325,10 @@ select {
   color: var(--black);
 }
 .dark-theme .check-list .active {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+.dark-theme .check-list .item:has(.show) {
+  background-color: rgba(255, 255, 255, 0.12) !important;
 }
 .dark-theme .body-3 {
   color: var(--black);
@@ -1468,6 +1471,12 @@ select {
 }
 .dark-theme .text-black {
   color: var(--black) !important;
+}
+.dark-theme .list-view-v3 .item svg path {
+  stroke: var(--black);
+}
+.dark-theme .icon-arr-dark path {
+  stroke: var(--black);
 }
 
 /*------------ Components ---------------- */
@@ -5611,15 +5620,17 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 /*------------ list view ---------------- */
-.list-view li .item {
+.list-view .item {
+  border-top: 1px solid var(--line);
+}
+.list-view .item a {
   padding: 20px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  border-bottom: 1px solid var(--line);
 }
-.list-view li .item .content {
+.list-view .item .content {
   flex-grow: 1;
   color: var(--black);
   letter-spacing: 0.2px;
@@ -5627,30 +5638,27 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   line-height: 22px;
   font-weight: 600;
 }
-.list-view li .item .box-icon {
+.list-view .item .box-icon {
   flex-shrink: 0;
 }
-.list-view li .item .icon-right path {
+.list-view .item .icon-right path {
   stroke: red;
 }
-.list-view li .item.active {
+.list-view .item.active {
   border-color: transparent;
+  border-radius: 16px;
+}
+.list-view .item.active a {
   box-shadow: var(--shadow-2);
   padding: 12px;
-  border-radius: 16px;
   position: relative;
+  border-radius: 16px;
 }
-.list-view li .item.active::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -1px;
-  width: 100%;
-  height: 10px;
+.list-view .item.active + .item {
+  border-color: transparent;
 }
-.list-view li:last-child .item {
-  border: 0;
+.list-view .item:first-child {
+  border: none;
 }
 
 .list-view-v2 li:not(:last-child) {
@@ -5677,40 +5685,37 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   stroke: var(--black);
 }
 
-.list-view-v3 li .item {
+.list-view-v3 .item {
+  border-top: 1px solid var(--line);
+}
+.list-view-v3 .item a {
   padding: 28px 12px 18px;
-  border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-.list-view-v3 li .item .content {
+.list-view-v3 .item .content {
   flex-grow: 1;
   font-size: 18px;
   line-height: 21.6px;
   font-weight: 600;
   color: var(--black);
 }
-.list-view-v3 li .item.active {
+.list-view-v3 .item.active {
+  border-color: transparent !important;
+  border-radius: 16px;
+}
+.list-view-v3 .item.active a {
   padding: 16px 12px;
   box-shadow: var(--shadow-2);
-  border: none;
   border-radius: 16px;
-  border-color: transparent;
   position: relative;
 }
-.list-view-v3 li .item.active::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -1px;
-  width: 100%;
-  height: 10px;
-  background-color: var(--white);
+.list-view-v3 .item.active + .item {
+  border-color: transparent;
 }
-.list-view-v3 li .item .tag {
+.list-view-v3 .item .tag {
   font-size: 8px;
   line-height: 9.6px;
   font-weight: 600;
@@ -5719,7 +5724,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   border-radius: 5px;
   background-color: var(--rgba-primary);
 }
-.list-view-v3 li:last-child .item {
+.list-view-v3 .item:first-child {
   border: none;
 }
 
@@ -5773,6 +5778,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 .list-view-v6 li .item {
   padding: 20px 16px;
+  padding-top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -5781,11 +5787,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .list-view-v6 li .item .content {
   flex-grow: 1;
 }
-.list-view-v6 li .item.active {
+.list-view-v6 li .item:has(.show), .list-view-v6 li .item.active {
   border-color: transparent;
   box-shadow: var(--shadow-2);
+  background-color: var(--white);
   padding: 16px;
   border-radius: 16px;
+  padding-top: 16px;
 }
 .list-view-v6 li:last-child .item {
   border: 0;
@@ -5812,6 +5820,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .item.box-accordion .body {
   padding-bottom: 16px;
+}
+.item:has(.show) {
+  border-color: transparent;
+  box-shadow: var(--shadow-2);
+  background-color: var(--white);
+  padding: 16px;
+  border-radius: 16px;
 }
 
 .list-view-v7 li .item {
@@ -5875,6 +5890,35 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   width: 6px;
   height: 6px;
   border-radius: 50%;
+}
+
+.list-view-v9 li .item {
+  padding: 20px 12px;
+  padding-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.list-view-v9 li .item .content {
+  flex-grow: 1;
+}
+.list-view-v9 li .item:has(.show), .list-view-v9 li .item.active {
+  border-color: transparent;
+  box-shadow: var(--shadow-2);
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: 16px;
+  padding-top: 12px;
+}
+.list-view-v9 li .item:has(.show) .box, .list-view-v9 li .item.active .box {
+  padding-bottom: 12px;
+}
+.list-view-v9 li .item .box {
+  padding-bottom: 20px;
+}
+.list-view-v9 li:last-child .item {
+  border: 0;
 }
 
 /*------------ nice select ---------------- */
@@ -6548,6 +6592,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .box-boarding-fixed .title {
   padding-right: 40px;
+  color: #fff;
 }
 .box-boarding-fixed .desc {
   margin-bottom: 30px;
@@ -6582,6 +6627,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.box-boarding-fixed .button-1 {
+  color: #fff;
 }
 
 .banner-choose-wallet img {

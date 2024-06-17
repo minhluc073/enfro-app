@@ -277,6 +277,7 @@
     padding: 28px 24px 32px;
     .title {
         padding-right: 40px;
+        color: #fff;
     }
     .desc{
        margin-bottom: 30px; 
@@ -317,6 +318,9 @@
             background-color: #fff;
             @include flex(center, center);
         }
+    }
+    .button-1{
+        color: #fff;
     }
 }
 .banner-choose-wallet{

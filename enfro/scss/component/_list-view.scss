@@ -1,12 +1,15 @@
 .list-view {
-    li {
         .item {
-            padding: 20px 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            border-bottom: 1px solid var(--line);
+            border-top: 1px solid var(--line);
+
+            a{
+                padding: 20px 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 16px;
+            }
+            
             .content {
                 flex-grow: 1;
                 color: var(--black);
@@ -23,29 +26,25 @@
             }
             &.active {
                 border-color: transparent;
-                box-shadow: var(--shadow-2);
-                padding: 12px;
                 border-radius: 16px;
-                position: relative;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: -1px;
-                    width: 100%;
-                    height: 10px;
-                    // background-color: var(--white);
+                a{
+                    box-shadow: var(--shadow-2);
+                    padding: 12px;
+                    position: relative;
+                    border-radius: 16px;
+
                 }
+                + .item {
+                    border-color: transparent;
+                }  
+                
+            }
+            &:first-child {
+                border: none;
             }
         }
 
-        &:last-child {
-            .item {
-                border: 0;
-            }
-        }
-    }
+        
 }
 .list-view-v2 {
     li {
@@ -73,54 +72,52 @@
     }
 }
 .list-view-v3 {
-    li {
-        .item {
+
+    .item {
+        border-top: 1px solid var(--line);
+        a{
             padding: 28px 12px 18px;
-            border-bottom: 1px solid var(--line);
             @include flex(center, space-between);
-            gap: 20px;
-            .content {
-                flex-grow: 1;
-                font-size: 18px;
-                line-height: 21.6px;
-                font-weight: 600;
-                color: var(--black);
-            }
-            &.active {
+            gap: 20px;  
+        }
+        
+        .content {
+            flex-grow: 1;
+            font-size: 18px;
+            line-height: 21.6px;
+            font-weight: 600;
+            color: var(--black);
+        }
+        &.active {
+            border-color: transparent !important;
+            border-radius: 16px;
+            a{
                 padding: 16px 12px;
                 box-shadow: var(--shadow-2);
-                border: none;
                 border-radius: 16px;
-                border-color: transparent;
                 position: relative;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: -1px;
-                    width: 100%;
-                    height: 10px;
-                    background-color: var(--white);
-                }
             }
-            .tag{
-                font-size: 8px;
-                line-height: 9.6px;
-                font-weight: 600;
-                color: var(--primary);
-                padding: 5px 10px;
-                border-radius: 5px;
-                background-color: var(--rgba-primary);
+            
+            + .item {
+                border-color: transparent;
             }
+            
         }
-
-        &:last-child {
-            .item {
-                border: none;
-            }
+        .tag{
+            font-size: 8px;
+            line-height: 9.6px;
+            font-weight: 600;
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: var(--rgba-primary);
+        }
+        &:first-child {
+            border: none;
         }
     }
+
+
 }
 .list-view-v4 {
     li {
@@ -180,6 +177,7 @@
     li {
         .item {
             padding: 20px 16px;
+            padding-top: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -187,12 +185,16 @@
             .content {
                 flex-grow: 1;
             }
+            &:has(.show),
             &.active {
                 border-color: transparent;
                 box-shadow: var(--shadow-2);
+                background-color: var(--white);
                 padding: 16px;
                 border-radius: 16px;
+                padding-top: 16px;
             }
+            
         }
 
         &:last-child {
@@ -202,6 +204,9 @@
         }
     }
 }
+
+
+
 .item {
     &.box-accordion {
         display: block !important;
@@ -227,6 +232,16 @@
         .body{
             padding-bottom: 16px;
         }
+
+    }
+    &.active{
+    }
+    &:has(.show){
+        border-color: transparent;
+        box-shadow: var(--shadow-2);
+        background-color: var(--white);
+        padding: 16px;
+        border-radius: 16px;
     }
 }
 
@@ -304,4 +319,40 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
+}
+.list-view-v9 {
+    li {
+        .item {
+            padding: 20px 12px;
+            padding-top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--line);
+            .content {
+                flex-grow: 1;
+            }
+            &:has(.show),
+            &.active {
+                border-color: transparent;
+                box-shadow: var(--shadow-2);
+                background-color: var(--white);
+                padding: 12px;
+                border-radius: 16px;
+                padding-top: 12px;
+                .box{
+                    padding-bottom: 12px;
+                }
+            }
+            .box {
+                padding-bottom: 20px;
+            }
+        }
+
+        &:last-child {
+            .item {
+                border: 0;
+            }
+        }
+    }
 }
