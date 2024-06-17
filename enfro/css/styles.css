@@ -5738,12 +5738,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .list-view-v4 li .item .content {
   flex-grow: 1;
 }
-.list-view-v4 li:first-child .item {
-  padding: 20px 12px;
-  box-shadow: var(--shadow-2);
-  border-radius: 16px;
-  border: none;
-}
 .list-view-v4 li:last-child .item {
   border: none;
 }

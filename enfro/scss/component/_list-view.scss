@@ -129,14 +129,14 @@
                 flex-grow: 1;
             }
         }
-        &:first-child {
-            .item {
-                padding: 20px 12px;
-                box-shadow: var(--shadow-2);
-                border-radius: 16px;
-                border: none;
-            }
-        }
+        // &:first-child {
+        //     .item {
+        //         padding: 20px 12px;
+        //         box-shadow: var(--shadow-2);
+        //         border-radius: 16px;
+        //         border: none;
+        //     }
+        // }
         &:last-child {
             .item {
                 border: none;
