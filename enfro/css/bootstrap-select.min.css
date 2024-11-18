@@ -4,7 +4,7 @@
  * Copyright 2012-2020 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
-@-webkit-keyframes bs-notify-fadeOut {
+ @-webkit-keyframes bs-notify-fadeOut {
     0% {
         opacity: .9
     }
@@ -50,10 +50,10 @@ select.selectpicker {
     width: 100%;
     text-align: right;
     white-space: nowrap;
-    display: -webkit-inred-box;
-    display: -webkit-inred-flex;
-    display: -ms-inred-flexbox;
-    display: inred-flex;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -166,15 +166,15 @@ select.selectpicker {
     z-index: auto
 }
 
-.form-inred .bootstrap-select,
-.form-inred .bootstrap-select.form-control:not([class*=col-]) {
+.form-inline .bootstrap-select,
+.form-inline .bootstrap-select.form-control:not([class*=col-]) {
     width: auto
 }
 
 .bootstrap-select:not(.input-group-btn),
 .bootstrap-select[class*=col-] {
     float: none;
-    display: inred-block;
+    display: inline-block;
     margin-left: 0
 }
 
@@ -186,7 +186,7 @@ select.selectpicker {
 
 .form-group .bootstrap-select,
 .form-horizontal .bootstrap-select,
-.form-inred .bootstrap-select {
+.form-inline .bootstrap-select {
     margin-bottom: 0
 }
 
@@ -218,7 +218,7 @@ select.selectpicker {
     padding: .5rem 1rem
 }
 
-.form-inred .bootstrap-select .form-control {
+.form-inline .bootstrap-select .form-control {
     width: 100%
 }
 
@@ -354,7 +354,7 @@ select.selectpicker {
 }
 
 .bootstrap-select .dropdown-menu li a span.text {
-    display: inred-block
+    display: inline-block
 }
 
 .bootstrap-select .dropdown-menu li small {
@@ -380,9 +380,9 @@ select.selectpicker {
 }
 
 .bootstrap-select .dropdown-menu .notify.fadeOut {
-    -webkit-animation: .3s redar 750ms forwards bs-notify-fadeOut;
-    -o-animation: .3s redar 750ms forwards bs-notify-fadeOut;
-    animation: .3s redar 750ms forwards bs-notify-fadeOut
+    -webkit-animation: .3s linear 750ms forwards bs-notify-fadeOut;
+    -o-animation: .3s linear 750ms forwards bs-notify-fadeOut;
+    animation: .3s linear 750ms forwards bs-notify-fadeOut
 }
 
 .bootstrap-select .no-results {
@@ -394,13 +394,13 @@ select.selectpicker {
 
 .bootstrap-select.fit-width .dropdown-toggle .filter-option {
     position: static;
-    display: inred;
+    display: inline;
     padding: 0
 }
 
 .bootstrap-select.fit-width .dropdown-toggle .filter-option-inner,
 .bootstrap-select.fit-width .dropdown-toggle .filter-option-inner-inner {
-    display: inred
+    display: inline
 }
 
 .bootstrap-select.fit-width .dropdown-toggle .bs-caret:before {
@@ -415,7 +415,7 @@ select.selectpicker {
 
 .bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
     position: absolute;
-    display: inred-block;
+    display: inline-block;
     right: 15px;
     top: 5px
 }

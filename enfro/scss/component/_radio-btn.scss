@@ -101,7 +101,7 @@
     -webkit-appearance: none;
     @include flex(center, center);
     &::before {
-        content: "\e931";
+        content: "\e937";
         position: absolute;
         font-family: $fontIcon;
         font-size: 12px;
@@ -119,64 +119,6 @@
         }
     }
 }
-.cb-rounded {
-    position: relative;
-    border: 1px solid --primary;
-    background: none;
-    cursor: pointer;
-    outline: 0;
-    width: 18px;
-    height: 18px;
-    -webkit-appearance: none;
-    border-radius: 50%;
-    background-color: --white;
 
-    &:checked {
-        &::before {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-            width: 12px;
-            height: 12px;
-            left: 2px;
-            top: 2px;
-            background-color: --primary;
-        }
-    }
-}
 
-.radio-check {
-    position: relative;
-    border: 4px solid red;
-    border-radius: 100px;
-    background: red;
-    cursor: pointer;
-    outline: 0;
-    width: 28px;
-    height: 28px;
-    -webkit-appearance: none;
-    @include flex(center, center);
-    &::before {
-        content: "\e93b";
-        position: absolute;
-        font-family: $fontIcon;
-        font-size: 9px;
 
-        color: red;
-    }
-    &:checked {
-        border-color: red;
-        background-color: --primary;
-        &::before {
-            color: --white;
-        }
-    }
-
-    &.success {
-        &:checked {
-            border-color: #fff;
-
-            background-color: red;
-        }
-    }
-}

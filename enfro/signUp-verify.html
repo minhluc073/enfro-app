@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
-
     <!-- font -->
     <link rel="stylesheet" href="fonts/fonts.css">
     <!-- Icons -->
     <link rel="stylesheet" href="fonts/font-icons.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet"type="text/css" href="css/nouislider.min.css"/>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet"type="text/css" href="css/styles.css"/>
 
@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="images/logo/168.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo/168.png" />
 
-    <title>onboarding</title>
+    <title>Sign Up Verify</title>
 </head>
 
 <body>
@@ -51,49 +51,35 @@
         </div>
     </div>
     <!-- /preload -->
-
- 
-    <div class="boarding-section">
-        
-        <div class="banner-boarding-section">
-            <img class="lazyload" data-src="images/background/boarding-1.png" alt="img">
+    <div class="header fixed-top">
+        <div class="left">
+          <a href="javascript:void(0);" class="icon back-btn"><i class="icon-arrow-right"></i></a>
         </div>
-        <div class="box-boarding-fixed">
-            <h1 class="title">Launch and Grow your great NFT!</h1>
-            <p class="desc mt-16 body-3">Explore and launch the top collection of NFTs (Non Fungible Token) as well</p>
-            <div class="btn-start">
-                <span id="slider" class="icon btn-swipe">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.6797 14.62L14.2397 12.06L11.6797 9.5" stroke="#7F52FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M4 12.0596H14.17" stroke="#7F52FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#7F52FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> 
-                </span>
-                <!-- <span class="icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.6797 14.62L14.2397 12.06L11.6797 9.5" stroke="#7F52FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M4 12.0596H14.17" stroke="#7F52FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#7F52FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>  
-                </span> -->
-                <span class="button-1 swipe-text">SWIPE TO GET STARTED</span>
+        <h3>Verify Code</h3>
+    </div>
+    <div class="app-content style-3">
+        <div class="tf-container">
+            <p class="mt-24 text-dark-2">Please enter the code we just sent to email</p>
+            <p class="">jonathansmith@gmail.com</p>
+
+            <div class="digit-group mt-30">
+                <input class="form-control" required type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" value="7">
+                <input class="form-control" required type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2">
+                <input class="form-control" required type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3">
+                <input class="form-control" required type="text" id="digit-5" name="digit-5" data-next="digit-6" data-previous="digit-4">
             </div>
+            <p class="d-flex justify-content-center mt-30 text-center text-dark-2">Resend code in&nbsp;<span class="fw-7 text-primary js-countdown" data-timer="60" data-labels=" :  ,  : , : , "></span></p>
+            <a href="successfully.html" class="mt-60 tf-btn primary btn-md">Continue</a>
         </div>
     </div>
+
+   
     
-    
-  
-    
-
-
-
-
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/lazysize.min.js"></script>
-    <script type="text/javascript" src="js/carousel.js"></script>
-    <script type="text/javascript" src="js/swipe-button.js"></script>
+    <script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="js/count-down.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
 </body>

@@ -97,6 +97,7 @@
     &.dropup {
         .dropdown-toggle {
             &:after {
+                display: none;
                 content: "\e919";
                 font-family: $fontIcon;
                 border: 0;

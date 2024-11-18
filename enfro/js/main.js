@@ -1,24 +1,20 @@
 /*
  * show pass
  * otp input
- * drop calendar
  * delete Item 
- * progress circle
- * input file
+ * check item
  * back Page
- * clear Text
- * message
- * gallery
- * image select
+ * handle time
+ * Datepicker 
  * active Suggestions
  * change value
- * load more
- * check item
  * touch spin
  * preloader 
  * modal click handle
- * tree view
  * tab slide 
+ * toggle theme
+ * Counter
+ * Input file 
 *******************************
 
 
@@ -26,7 +22,7 @@
 (function ($) {
   "use strict";
 
-  /* show pass
+    /* show pass
   ------------------------------------------------------------------------------------- */
   var showPass = function () {
     $(".show-pass").on("click", function () {
@@ -46,25 +42,9 @@
         $(".password-field2").attr("type", "password");
       }
     });
-    $(".show-pass3").on("click", function () {
-      $(this).toggleClass("active");
-      if ($(".password-field3").attr("type") == "password") {
-        $(".password-field3").attr("type", "text");
-      } else if ($(".password-field3").attr("type") == "text") {
-        $(".password-field3").attr("type", "password");
-      }
-    });
-    $(".show-pass4").on("click", function () {
-      $(this).toggleClass("active");
-      if ($(".password-field4").attr("type") == "password") {
-        $(".password-field4").attr("type", "text");
-      } else if ($(".password-field4").attr("type") == "text") {
-        $(".password-field4").attr("type", "password");
-      }
-    });
   };
 
-  /* otp input
+   /* otp input
   ------------------------------------------------------------------------------------- */
   var otpInput = function () {
     if ($(".digit-group").length > 0) {
@@ -107,9 +87,6 @@
     }
   };
 
-  /* drop calendar
-  ------------------------------------------------------------------------------------- */
-
 
   /* delete Item 
   ------------------------------------------------------------------------------------- */
@@ -128,53 +105,6 @@
     });
   };
 
-  /* progress circle  
-  ------------------------------------------------------------------------------------- */
-  var progressCircle = function () {
-    $(".circle_percent").each(function () {
-      var $this = $(this),
-        $dataV = $this.data("percent"),
-        $dataDeg = $dataV * 3.6,
-        $round = $this.find(".round_per");
-      $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
-      $this.append(
-        '<div class="circle_inbox"><span class="percent_text"></span></div>'
-      );
-      $this.prop("Counter", 0).animate(
-        { Counter: $dataV },
-        {
-          duration: 2000,
-          easing: "swing",
-          step: function (now) {
-            $this.find(".percent_text").text(Math.ceil(now) + "%");
-          },
-        }
-      );
-      if ($dataV >= 51) {
-        $round.css("transform", "rotate(" + 360 + "deg)");
-        setTimeout(function () {
-          $this.addClass("percent_more");
-        }, 1000);
-        setTimeout(function () {
-          $round.css(
-            "transform",
-            "rotate(" + parseInt($dataDeg + 180) + "deg)"
-          );
-        }, 1000);
-      }
-    });
-  };
-  /* input file 
-  ------------------------------------------------------------------------------------- */
-  var flcustominput = function () {
-    $("input[type=file]").change(function (e) {
-      $(this)
-        .parents(".uploadfile")
-        .find(".file-name")
-        .text(e.target.files[0].name);
-    });
-  };
-
   /* back Page
   ------------------------------------------------------------------------------------- */
   var backPage = function () {
@@ -185,49 +115,7 @@
     });
   };
 
-  /* clear Text
-  ------------------------------------------------------------------------------------- */
-  var clearText = function () {
-    $(".icon-cancel").on("click", function () {
-      $(".ip-field").val("");
-    });
-  };
-  /* message
-  ------------------------------------------------------------------------------------- */
-  var handleMessage = function () {
-    $(".btn-message").on("click", function () {
-      var ipMessage = $(".val-message");
-      var messValue = ipMessage.val();
-      var currentTime = new Date();
-      var hours = currentTime.getHours() >= 12 ? "PM" : "AM";
-      var realTime =
-        (currentTime.getHours() % 12) +
-        ":" +
-        currentTime.getMinutes() +
-        " " +
-        hours;
-
-      var domMessage =
-        '<div class="bubble bubble-me box-buble-me">' +
-        '<div class="content">' +
-        '<span class="time">' +
-        realTime +
-        "</span>" +
-        '<p class="start">' +
-        messValue +
-        "</p>" +
-        "</div>" +
-        "</div>";
-
-      if (messValue.length > 0) {
-        $(".chat-area").append(domMessage);
-      }
-
-      window.scrollTo(0, document.body.scrollHeight);
-      ipMessage.val("");
-    });
-  };
-
+ 
   /* handle time
   ------------------------------------------------------------------------------------- */
   var handleTime = function () {
@@ -271,47 +159,6 @@
     }
   };
 
-  /* gallery
-  ------------------------------------------------------------------------------------- */
-  var lightGalleryBox = function () {
-    if ($("#lightgallery").length > 0) {
-      lightGallery(document.getElementById("lightgallery"), {
-        plugins: [lgZoom, lgThumbnail],
-      });
-    }
-    if ($("#lightgallery2").length > 0) {
-      lightGallery(document.getElementById("lightgallery2"), {
-        plugins: [lgZoom, lgThumbnail],
-      });
-    }
-    if ($("#lightgallery3").length > 0) {
-      lightGallery(document.getElementById("lightgallery3"), {
-        plugins: [lgZoom, lgThumbnail],
-      });
-    }
-  };
-
-  /* image select
-  ------------------------------------------------------------------------------------- */
-  var selectImages = function () {
-    if ($(".image-select").length > 0) {
-      const selectIMG = $(".image-select");
-      selectIMG.find("option").each((idx, elem) => {
-        const selectOption = $(elem);
-        const imgURL = selectOption.attr("data-thumbnail");
-        if (imgURL) {
-          selectOption.attr(
-            "data-content",
-            "<img src='%i'/> %s"
-              .replace(/%i/, imgURL)
-              .replace(/%s/, selectOption.text())
-          );
-        }
-      });
-      selectIMG.selectpicker();
-    }
-  };
-
   /* active Suggestions
   ------------------------------------------------------------------------------------- */
   var activeSuggest = function () {
@@ -345,7 +192,6 @@
   if ($(".nice-select").length > 0) {
     $(".select_js").niceSelect();
   }
-
   /* change value
   ------------------------------------------------------------------------------------- */
   var changeValue = function () {
@@ -362,23 +208,6 @@
       $(".text-val-form").text($(this).find(".title-form").text());
     });
   };
-
-  /* load more
-  ------------------------------------------------------------------------------------- */
-  var loadmore = function () {
-    if ($("ul").hasClass("loadmore-item")) {
-      $(".fl-item").slice(0, 9).show();
-      $("#button-loadmore").on("click", function (e) {
-        console.log("Loadin");
-        e.preventDefault();
-        $(".fl-item:hidden").slice(0, 3).slideDown();
-        if ($(".fl-item:hidden").length == 0) {
-          $("#button-loadmore").hide();
-        }
-      });
-    }
-  };
-
   /* toggle theme
   ------------------------------------------------------------------------------------- */
   var toggleTheme = function () {
@@ -459,20 +288,7 @@
     }
   };
 
-  /* tree view
-  ------------------------------------------------------------------------------------- */
-  var treeView = function () {
-    if ($("#treeview1").length > 0) {
-      $("#treeview1").jstree({
-        plugins: ["dnd", "types"],
-      });
-    }
-    if ($("#treeview2").length > 0) {
-      $("#treeview2").jstree({
-        plugins: ["dnd", "wholerow", "checkbox", "types"],
-      });
-    }
-  };
+
   /* tab slide 
   ------------------------------------------------------------------------------------- */
   var tabSlide = function () {
@@ -511,21 +327,12 @@
     otpInput();
     delItem();
     backPage();
-    clearText();
-    handleMessage();
-    lightGalleryBox();
     activeSuggest();
-    selectImages();
-    loadmore();
     touchSpin();
-    treeView();
     changeValue();
     resetCheck();
-    progressCircle();
     clickModalSecond();
-    flcustominput();
     tabSlide();
-    // dropCalendar();
     flatCounter();
     handleTime();
     datePicker();

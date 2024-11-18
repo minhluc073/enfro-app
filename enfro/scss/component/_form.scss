@@ -26,7 +26,7 @@
     position: relative;
 
     .form-control {
-        padding-left: 52px;
+        padding-left: 42px;
         padding-top: 15px;
         padding-bottom: 15px;
         border-radius: 12px;
@@ -37,19 +37,11 @@
     .icon {
         position: absolute;
         top: 16px;
-        left: 20px;
+        left: 16px;
         font-size: 20px;
         color: rgba(49, 57, 79, 0.6);
     }
-    .box-view-hide {
-        .show-pass,
-        .show-pass2,
-        .show-pass3,
-        .show-pass4 {
-            // top: 20px;
-            // right: 20px;
-        }
-    }
+
     .ip-textarea {
         padding-left: 20px;
     }
@@ -307,31 +299,6 @@
     }
 }
 
-.digit-group {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-
-    input {
-        width: 56px;
-        height: 56px;
-        border-radius: 12px;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 18px;
-        color: var(--black);
-        text-align: center;
-        background: rgba(248, 250, 252, 1);
-        border-color: transparent;
-
-        &:focus {
-            color: var(--black);
-        }
-        &:valid {
-            border-color: var(--primary);
-        }
-    }
-}
 
 .search-box {
     position: relative;
@@ -365,68 +332,7 @@
     }
 }
 
-.select-wrapper {
-    position: relative;
-    min-width: 120px;
-    .icon {
-        position: absolute;
-        top: 12px;
-        left: 15px;
-    }
-    .tf-select {
-        font-size: 14px;
-        line-height: 16px;
-        font-weight: 500;
-        color: rgba(49, 57, 79, 0.8);
-        padding: 12px;
-        padding-left: 40px;
-        padding-right: 30px;
-        position: relative;
-        z-index: 10;
-        background-color: transparent;
-    }
-    &::after {
-        content: "\e91a";
-        position: absolute;
-        font-family: $fontIcon;
-        font-size: 16px;
-        top: 13px;
-        right: 14px;
-        z-index: 8;
-        color: rgb(49, 57, 79, 0.6);
-    }
-    &.style-1 {
-        background-color: var(--white);
-        border-radius: 12px;
-        .icon {
-            left: 20px;
-            top: 10px;
-        }
-        .tf-select {
-            padding: 14px;
-            padding-left: 48px;
-            padding-right: 20px;
-        }
-        &::after {
-            content: "\e91d";
-            transform: rotate(270deg);
-            font-size: 12px;
-            right: 20px;
-            top: 12px;
-        }
-    }
-    &.style-2 {
-        min-width: 85px;
-        .tf-select {
-            padding-left: 20px;
-        }
-    }
-    &.style-3 {
-        .tf-select {
-            padding-left: 15px;
-        }
-    }
-}
+
 .uploadfile {
     .add-file {
         position: relative;
@@ -518,5 +424,107 @@
         left: 12px;
         top: 12px;
         bottom: 12px;
+    }
+}
+
+.box-view-hide {
+    position: relative;
+    .form-control {
+        padding-right: 40px;
+    }
+    .show-pass,
+    .show-pass2 {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        cursor: pointer;
+        .icon-eye {
+            display: none;
+        }
+        .icon-pass {
+            font-size: 20px;
+            color: rgba(49, 57, 79, 0.6);
+        }
+        &.active {
+            .icon-eye {
+                display: inline-block;
+            }
+            .icon-eye-off {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+.auth-line {
+    margin: 40px 0px;
+    position: relative;
+    @include flex(center, center);
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 1px;
+        width: 30%;
+        background: var(--line);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 30%;
+        height: 1px;
+        background: var(--line);
+    }
+}
+
+.btn-social-icon {
+    width: 80px;
+    height: 52px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    @include flex(center, center);
+    .img-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+.cb-signup {
+    display: flex;
+    gap: 12px;
+    input {
+        flex-shrink: 0;
+        border-radius: 2px;
+    }
+    label {
+
+        font-size: 13px;
+        line-height: 22px;
+        margin-bottom: 0;
+    }
+}
+.digit-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    input {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 18px;
+        color: var(--black);
+        text-align: center;
+        border-color: var(--line);
+        &:focus {
+            color: var(--black);
+        }
+        &:valid {
+            border-color: var(--primary) !important;
+        }
     }
 }
